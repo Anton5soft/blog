@@ -470,3 +470,206 @@ Stack trace:
 REQUEST_URI=/blogtest/index.php/admin/post/admin
 HTTP_REFERER=http://localhost/blogtest/index.php/admin/post/
 ---
+2014/02/24 21:10:21 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "index".' in /var/www/framework/web/CController.php:483
+Stack trace:
+#0 /var/www/framework/web/CController.php(270): CController->missingAction('index')
+#1 /var/www/framework/web/CWebApplication.php(282): CController->run('index')
+#2 /var/www/framework/web/CWebApplication.php(141): CWebApplication->runController('site/index')
+#3 /var/www/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#4 /var/www/blogtest/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/blogtest/index.php/site/index
+HTTP_REFERER=http://localhost/blogtest/index.php/site/login
+---
+2014/02/24 21:12:06 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "index".' in /var/www/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/framework/web/CWebApplication.php(141): CWebApplication->runController('index')
+#1 /var/www/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /var/www/blogtest/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/blogtest/index.php/index
+HTTP_REFERER=http://localhost/blogtest/index.php/site/page?view=about
+---
+2014/02/24 21:12:48 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "index.php".' in /var/www/framework/web/CController.php:483
+Stack trace:
+#0 /var/www/framework/web/CController.php(270): CController->missingAction('index.php')
+#1 /var/www/framework/web/CWebApplication.php(282): CController->run('index.php')
+#2 /var/www/framework/web/CWebApplication.php(141): CWebApplication->runController('post/index.php')
+#3 /var/www/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#4 /var/www/blogtest/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/blogtest/index.php/post/index.php
+HTTP_REFERER=http://localhost/blogtest/index.php
+---
+2014/02/24 21:12:54 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "index.php".' in /var/www/framework/web/CController.php:483
+Stack trace:
+#0 /var/www/framework/web/CController.php(270): CController->missingAction('index.php')
+#1 /var/www/framework/web/CWebApplication.php(282): CController->run('index.php')
+#2 /var/www/framework/web/CWebApplication.php(141): CWebApplication->runController('site/index.php')
+#3 /var/www/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#4 /var/www/blogtest/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/blogtest/index.php/site/index.php
+HTTP_REFERER=http://localhost/blogtest/index.php/post/index.php
+---
+2014/02/24 21:12:55 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "index.php".' in /var/www/framework/web/CController.php:483
+Stack trace:
+#0 /var/www/framework/web/CController.php(270): CController->missingAction('index.php')
+#1 /var/www/framework/web/CWebApplication.php(282): CController->run('index.php')
+#2 /var/www/framework/web/CWebApplication.php(141): CWebApplication->runController('site/index.php')
+#3 /var/www/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#4 /var/www/blogtest/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/blogtest/index.php/site/index.php
+HTTP_REFERER=http://localhost/blogtest/index.php/site/index.php
+---
+2014/02/24 21:13:20 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "index".' in /var/www/framework/web/CController.php:483
+Stack trace:
+#0 /var/www/framework/web/CController.php(270): CController->missingAction('')
+#1 /var/www/framework/web/CWebApplication.php(282): CController->run('')
+#2 /var/www/framework/web/CWebApplication.php(141): CWebApplication->runController('site')
+#3 /var/www/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#4 /var/www/blogtest/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/blogtest/index.php/site
+HTTP_REFERER=http://localhost/blogtest/index.php
+---
+2014/02/24 21:14:14 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "index".' in /var/www/framework/web/CController.php:483
+Stack trace:
+#0 /var/www/framework/web/CController.php(270): CController->missingAction('')
+#1 /var/www/framework/web/CWebApplication.php(282): CController->run('')
+#2 /var/www/framework/web/CWebApplication.php(141): CWebApplication->runController('site')
+#3 /var/www/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#4 /var/www/blogtest/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/blogtest/index.php/site
+HTTP_REFERER=http://localhost/blogtest/index.php/site
+---
+2014/02/24 21:43:14 [error] [php] Undefined variable: gridDataProvider (/var/www/blogtest/protected/views/post/admin.php:10)
+Stack trace:
+#0 /var/www/framework/web/CController.php(869): PostController->renderFile()
+#1 /var/www/framework/web/CController.php(782): PostController->renderPartial()
+#2 /var/www/blogtest/protected/controllers/PostController.php(149): PostController->render()
+#3 /var/www/framework/web/actions/CInlineAction.php(49): PostController->actionAdmin()
+#4 /var/www/framework/web/CController.php(308): CInlineAction->runWithParams()
+#5 /var/www/framework/web/filters/CFilterChain.php(133): PostController->runAction()
+#6 /var/www/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#7 /var/www/framework/web/CController.php(1145): CAccessControlFilter->filter()
+#8 /var/www/framework/web/filters/CInlineFilter.php(58): PostController->filterAccessControl()
+#9 /var/www/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter()
+#10 /var/www/framework/web/CController.php(291): CFilterChain->run()
+#11 /var/www/framework/web/CController.php(265): PostController->runActionWithFilters()
+#12 /var/www/framework/web/CWebApplication.php(282): PostController->run()
+#13 /var/www/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#14 /var/www/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#15 /var/www/blogtest/index.php(13): CWebApplication->run()
+REQUEST_URI=/blogtest/index.php/post/admin
+in /var/www/blogtest/protected/views/post/admin.php (10)
+in /var/www/blogtest/protected/controllers/PostController.php (149)
+in /var/www/blogtest/index.php (13)
+2014/02/24 21:56:16 [error] [php] Undefined variable: model (/var/www/blogtest/protected/views/post/index.php:6)
+Stack trace:
+#0 /var/www/framework/web/CController.php(869): PostController->renderFile()
+#1 /var/www/framework/web/CController.php(782): PostController->renderPartial()
+#2 /var/www/blogtest/protected/controllers/PostController.php(136): PostController->render()
+#3 /var/www/framework/web/actions/CInlineAction.php(49): PostController->actionIndex()
+#4 /var/www/framework/web/CController.php(308): CInlineAction->runWithParams()
+#5 /var/www/framework/web/filters/CFilterChain.php(133): PostController->runAction()
+#6 /var/www/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#7 /var/www/framework/web/CController.php(1145): CAccessControlFilter->filter()
+#8 /var/www/framework/web/filters/CInlineFilter.php(58): PostController->filterAccessControl()
+#9 /var/www/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter()
+#10 /var/www/framework/web/CController.php(291): CFilterChain->run()
+#11 /var/www/framework/web/CController.php(265): PostController->runActionWithFilters()
+#12 /var/www/framework/web/CWebApplication.php(282): PostController->run()
+#13 /var/www/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#14 /var/www/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#15 /var/www/blogtest/index.php(13): CWebApplication->run()
+REQUEST_URI=/blogtest/index.php/post/index
+in /var/www/blogtest/protected/views/post/index.php (6)
+in /var/www/blogtest/protected/controllers/PostController.php (136)
+in /var/www/blogtest/index.php (13)
+2014/02/25 16:31:28 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "post".' in /var/www/framework/web/CController.php:483
+Stack trace:
+#0 /var/www/framework/web/CController.php(270): CController->missingAction('post')
+#1 /var/www/framework/web/CWebApplication.php(282): CController->run('post')
+#2 /var/www/framework/web/CWebApplication.php(141): CWebApplication->runController('post/post/creat...')
+#3 /var/www/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#4 /var/www/blogtest/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/blogtest/index.php/post/post/create
+HTTP_REFERER=http://localhost/blogtest/index.php/post/index
+---
+2014/02/25 16:31:35 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "post".' in /var/www/framework/web/CController.php:483
+Stack trace:
+#0 /var/www/framework/web/CController.php(270): CController->missingAction('post')
+#1 /var/www/framework/web/CWebApplication.php(282): CController->run('post')
+#2 /var/www/framework/web/CWebApplication.php(141): CWebApplication->runController('post/post/admin')
+#3 /var/www/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#4 /var/www/blogtest/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/blogtest/index.php/post/post/admin
+HTTP_REFERER=http://localhost/blogtest/index.php/post/index
+---
+2014/02/25 16:32:00 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "post".' in /var/www/framework/web/CController.php:483
+Stack trace:
+#0 /var/www/framework/web/CController.php(270): CController->missingAction('post')
+#1 /var/www/framework/web/CWebApplication.php(282): CController->run('post')
+#2 /var/www/framework/web/CWebApplication.php(141): CWebApplication->runController('post/post/creat...')
+#3 /var/www/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#4 /var/www/blogtest/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/blogtest/index.php/post/post/create
+HTTP_REFERER=http://localhost/blogtest/index.php/post/index
+---
+2014/02/25 16:32:11 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "post".' in /var/www/framework/web/CController.php:483
+Stack trace:
+#0 /var/www/framework/web/CController.php(270): CController->missingAction('post')
+#1 /var/www/framework/web/CWebApplication.php(282): CController->run('post')
+#2 /var/www/framework/web/CWebApplication.php(141): CWebApplication->runController('post/post/creat...')
+#3 /var/www/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#4 /var/www/blogtest/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/blogtest/index.php/post/post/create
+HTTP_REFERER=http://localhost/blogtest/index.php/post/index
+---
+2014/02/25 16:46:42 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "index/post/create".' in /var/www/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/framework/web/CWebApplication.php(141): CWebApplication->runController('index/post/crea...')
+#1 /var/www/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /var/www/blogtest/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/blogtest/index/post/create
+HTTP_REFERER=http://localhost/blogtest/index.php
+---
+2014/02/25 16:46:51 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "index/post/create".' in /var/www/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/framework/web/CWebApplication.php(141): CWebApplication->runController('index/post/crea...')
+#1 /var/www/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /var/www/blogtest/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/blogtest/index/post/create
+HTTP_REFERER=http://localhost/blogtest/index.php
+---
+2014/02/25 16:52:46 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "index.php".' in /var/www/framework/web/CController.php:483
+Stack trace:
+#0 /var/www/framework/web/CController.php(270): CController->missingAction('index.php')
+#1 /var/www/framework/web/CWebApplication.php(282): CController->run('index.php')
+#2 /var/www/framework/web/CWebApplication.php(141): CWebApplication->runController('post/index.php/...')
+#3 /var/www/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#4 /var/www/blogtest/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/blogtest/index.php/post/index.php/post/admin
+HTTP_REFERER=http://localhost/blogtest/index.php/post/index
+---
+2014/02/25 16:52:58 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "index.php".' in /var/www/framework/web/CController.php:483
+Stack trace:
+#0 /var/www/framework/web/CController.php(270): CController->missingAction('index.php')
+#1 /var/www/framework/web/CWebApplication.php(282): CController->run('index.php')
+#2 /var/www/framework/web/CWebApplication.php(141): CWebApplication->runController('post/index.php/...')
+#3 /var/www/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#4 /var/www/blogtest/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/blogtest/index.php/post/index.php/post/admin
+HTTP_REFERER=http://localhost/blogtest/index.php/post/admin
+---
