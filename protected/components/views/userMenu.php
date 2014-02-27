@@ -7,6 +7,7 @@
         array('label'=>'Manage Posts', 'icon'=>'book','active'=>false, 'url'=>array('post/admin')),
         array('label'=>'Create New Post', 'icon'=>'pencil', 'active'=>false, 'url'=>array('post/create')),
         array('label'=>'Approve Comments', 'icon'=>'flag', 'active'=>false, 'url'=>array('comment/index')),
+        array('label'=>'Upload Image', 'icon'=>'flag', 'active'=>false, 'url'=>array('document/create')),
         array('label'=>'Logout', 'icon'=>'user', 'active'=>false, 'url'=>array('site/logout')),
     ),
 )); ?>

@@ -14,10 +14,10 @@
 
 	<div class="row">
 		<?php echo $form->labelEx($model,'content'); ?>
-        <?php $this->widget('application.extensions.ckeditor.CKEditor', array( 
-        'model'=>$model, 
-        'attribute'=>'content', 
-        'editorTemplate'=>'full', )); ?> 
+        <?php $this->widget('application.extensions.ckeditor.CKEditor', array(
+        'model'=>$model,
+        'attribute'=>'content',
+        'editorTemplate'=>'full', )); ?>
 
 		<?php echo $form->error($model,'content'); ?>
 	</div>
