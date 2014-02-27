@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Хост: localhost
--- Время создания: Фев 25 2014 г., 20:17
+-- Время создания: Фев 27 2014 г., 20:50
 -- Версия сервера: 5.5.35
 -- Версия PHP: 5.3.10-1ubuntu3.9
 
@@ -46,6 +46,43 @@ CREATE TABLE IF NOT EXISTS `tbl_comment` (
 INSERT INTO `tbl_comment` (`id`, `content`, `status`, `create_time`, `author`, `email`, `url`, `post_id`) VALUES
 (1, 'This is a test comment.', 2, 1230952187, 'Tester', 'tester@example.com', NULL, 2),
 (2, 'sda', 2, 1392990318, 'sda', 'asd@mail.ru', '', 1);
+
+-- --------------------------------------------------------
+
+--
+-- Структура таблицы `tbl_document`
+--
+
+CREATE TABLE IF NOT EXISTS `tbl_document` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `doc_name` varchar(255) DEFAULT NULL,
+  `doc_file` varchar(255) NOT NULL,
+  `doc_type` varchar(50) DEFAULT NULL,
+  `doc_size` varchar(50) DEFAULT NULL,
+  `summary` text NOT NULL,
+  `up_dated` date NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=2 ;
+
+--
+-- Дамп данных таблицы `tbl_document`
+--
+
+INSERT INTO `tbl_document` (`id`, `doc_name`, `doc_file`, `doc_type`, `doc_size`, `summary`, `up_dated`) VALUES
+(1, NULL, '1393525472_35313_1232000462_large.jpg', 'image/jpeg', '459997', '', '2014-02-27');
+
+-- --------------------------------------------------------
+
+--
+-- Структура таблицы `tbl_image`
+--
+
+CREATE TABLE IF NOT EXISTS `tbl_image` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `doc_file` varchar(255) CHARACTER SET utf8 NOT NULL,
+  `up_dated` date NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=7 ;
 
 -- --------------------------------------------------------
 
