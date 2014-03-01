@@ -19,6 +19,7 @@ return array(
 		'application.components.*',
 	),
    'modules'=>array(
+       'NewTable',
 		// uncomment the following to enable the Gii tool
 		'admin',
 		'gii'=>array(

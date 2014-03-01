@@ -3,8 +3,6 @@ $this->breadcrumbs=array(
 	'Manage Posts',
 );
 ?>
-<h1>Manage Posts</h1>
-
 
 <?php $this->widget('bootstrap.widgets.TbGridView', array(
     'type'=>'striped bordered condensed',

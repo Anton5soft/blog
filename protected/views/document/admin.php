@@ -40,12 +40,20 @@ or <b>=</b>) at the beginning of each of your search values to specify how the c
 )); ?>
 </div><!-- search-form -->
 
-<?php $this->widget('zii.widgets.grid.CGridView', array(
+<?php $this->widget('NTable', array(
 	'id'=>'document-grid',
 	'dataProvider'=>$model->search(),
 	'filter'=>$model,
+    'addingHeaders' => array(
+        array(
+
+            array('text'=>'','colspan'=>3,'options'=>array('class'=>'another-header-class')),
+            array('text'=>'cell 3','colspan'=>4,'options'=>array('class'=>'yet-another-class'))
+        ),
+    ),
 	'columns'=>array(
-		'id',
+
+                'id',
 		'doc_name',
 		'doc_file',
 		'doc_type',
@@ -57,5 +65,7 @@ or <b>=</b>) at the beginning of each of your search values to specify how the c
 		array(
 			'class'=>'CButtonColumn',
 		),
+
 	),
+
 )); ?>
