@@ -25,11 +25,16 @@ $('.search-form form').submit(function(){
 });
 ");
 ?>
-<?php Yii::app()->clientScript->registerCoreScript('jquery'); ?>
+<?php Yii::app()->clientScript->registerCoreScript('jquery');
+$baseUrl = Yii::app()->baseUrl;
+$cs = Yii::app()->getClientScript();
+$cs->registerScriptFile($baseUrl.'/js/jquery-ui.js', CClientScript::POS_END);
+$cs->registerScriptFile($baseUrl.'/js/dialog.js', CClientScript::POS_END);
+?>
 
 <link rel="stylesheet" href="<?php echo Yii::app()->request->baseUrl; ?>/js/jquery-ui.css">
 <script src="<?php echo Yii::app()->request->baseUrl; ?>/js/jquery-1.9.1.js"></script>
-<script src="<?php echo Yii::app()->request->baseUrl; ?>/js/jquery-ui.js"></script>
+<!--<script src="<?php echo Yii::app()->request->baseUrl; ?>/js/jquery-ui.js"></script>-->
 
 
 
@@ -49,7 +54,7 @@ or <b>=</b>) at the beginning of each of your search values to specify how the c
 )); ?>
 </div><!-- search-form -->
 
-<script>
+<!-- <script>
     $(function() {
         $( "#dialog" ).dialog({
             autoOpen: false,
@@ -68,7 +73,7 @@ or <b>=</b>) at the beginning of each of your search values to specify how the c
     });
 </script>
 
-
+-->
     <div id="dialog" title="Basic dialog">
         <?php
 

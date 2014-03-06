@@ -131,8 +131,16 @@ class PostController extends Controller
 			'criteria'=>$criteria,
 		));
 
+        $images = Document::model()->findAll();
+        $items = array();
+        foreach($images as $img){
+            $item = array('image'=>'/images/'.$img->doc_file, 'label'=>'First Thumbnail label', 'caption'=>'Cras justo odio, ');
+            array_push($items,$item);
+        }
 		$this->render('index',array(
 			'dataProvider'=>$dataProvider,
+            'images' => $images,
+            'items' => $items
 		));
 	}
 
