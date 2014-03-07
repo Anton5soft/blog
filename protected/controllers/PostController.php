@@ -131,13 +131,16 @@ class PostController extends Controller
 			),
 			'criteria'=>$criteria,
 		));
-        $image = Document::model()->doc_file;
-        $images = Document::model()->findAllByPk($image);
+        //$image = Document::model()->doc_file;
+        $images = Document::model()->findAll();
+        $items = array();
         foreach ($images as $image){
-            echo array('image'=>$image);
+            $item = array('image' =>'/images/'.$image->doc_file);
+            array_push($items,$item);
         }
 		$this->render('index',array(
 			'dataProvider'=>$dataProvider,
+            'items' => $items
 		));
 	}
 
